@@ -1,0 +1,248 @@
+.about-section {
+  padding: 4rem 2rem;
+  text-align: center;
+  background-color: var(--secondary);
+}
+
+.about-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Title - Bigger, bolder, and modern */
+.about {
+  font-size: 3.5rem;         /* Larger title */
+  font-weight: 800;
+  color: var(--title);
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+.about-title {
+  font-size: 2rem;             /* Big and bold */
+  font-weight: 700;              /* Strong weight for impact */
+  color: var(--title);           /* Uses theme color */
+  margin-bottom: 2rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;     /* Optional: all caps for modern feel */
+  line-height: 1.2;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.05); /* Subtle depth */
+}
+
+/* Tools section container */
+.tools-section {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+/* Tools section title */
+.tools-title {
+  font-size: 1.8rem;
+  color: var(--blue);
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* Tools list flex container */
+.tools-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+/* Each tool item */
+.tool-item {
+  border: 2px solid;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: default;
+  user-select: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.07);
+}
+
+/* Hover effect: scale + subtle glow */
+.tool-item:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  background-color: #fff;
+}
+
+/* Responsive: wrap on smaller screens */
+@media (max-width: 600px) {
+  .tools-list {
+    gap: 12px;
+  }
+  .tool-item {
+    padding: 7px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+/* Paragraph - Justified text for clean block appearance */
+.about-text {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: justify;       /* <--- Justified text */
+}
+
+/* Container for the boxes */
+.about-boxes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  justify-items: center;
+}
+/* --- EDUCATION SECTION --- */
+.education-section {
+  margin-top: 4rem;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+.education-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.education-timeline {
+  max-width: 750px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.education-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  text-align: left;
+  border-left: 4px solid var(--blue);
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.education-entry::before {
+  content: '';
+  position: absolute;
+  left: -8px;
+  top: 4px;
+  width: 12px;
+  height: 12px;
+  background-color: var(--blue);
+  border-radius: 50%;
+}
+
+.education-info {
+  flex-grow: 1;
+}
+
+.education-degree {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--title);
+  margin: 0;
+}
+
+.education-school {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-top: 0.3rem;
+}
+
+.education-date {
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  white-space: nowrap;
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  .education-entry {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .education-date {
+    margin-top: 0.5rem;
+    margin-left: 0;
+  }
+}
+
+
+@media (min-width: 768px) {
+  .about-boxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.about-box {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  border: 2px solid var(--blue);
+  border-radius: 12px;
+  padding: 1.5rem;
+  width: 100%;
+  height: 180px;
+  max-width: 450px;
+  background-color: var(--secondary);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.about-box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Icon */
+.about-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+/* Box text */
+.about-box p {
+  font-size: 1rem;
+  color: var(--white);
+  margin: 0;
+  text-align: left;
+  line-height: 1.4;
+}
+
+/* Responsive for small screens */
+@media (max-width: 600px) {
+  .about-box {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: auto;
+    padding: 1.5rem;
+  }
+
+  .about-icon {
+    margin: 0 0 10px 0;
+  }
+
+  .about-box p {
+    text-align: center;
+  }
+}

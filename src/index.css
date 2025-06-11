@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+:root {
+  --primary: #142348;          /* Deep navy blue background */
+  --secondary: #101f3e;        /* Slightly lighter blue for containers */
+  --accent: #0a0a0b;           /* Vivid but soft blue accent */
+  --border: #23385d;           /* Muted blue-gray border */
+  --text-light: #e0ecff;       /* Pale blue-white text */
+  --text-dark: #5e8fbf;        /* Soft steel blue text */
+  --backgroundheader: #000000;/* Mid-tone header background */
+  --blue: #5d86d3;             /* Strong modern blue for highlights */
+}
+
+
+.light {
+  /* Light Mode Colors */
+  --primary: #ecf1f4;          /* Clear bright sky blue background */
+  --secondary: #d8e2ee;        /* Soft light blue containers */
+  --accent: #b9dcff;           /* Bright blue accent (Google blue) */
+  --border: #c3dbee;           /* Light blue border */
+  --text-light: #121417;       /* Deep blue text */
+  --text-dark: #24272d;        /* Slightly lighter blue text */
+  --backgroundheader: #000000; /* Medium light blue header */
+   --blue: #6395b4;            /* Accent blue */
+}
+
+
+/* Base Styles */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: var(--primary);
+  color: var(--text-light);
+  transition: background 0.3s ease, color 0.3s ease;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+ul, li {
+  list-style: none;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+/* Utilities */
+.flex {
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  padding: 1rem 2rem;
+  margin: 0 auto;
+}
+
+.divider {
+  border-bottom: 1px solid var(--border);
+  margin: 3rem 0;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+::-webkit-scrollbar-track {
+  background: var(--secondary);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: #4c4a4a;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+html {
+  scrollbar-color: #6e6b6c #3d4a59;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+}

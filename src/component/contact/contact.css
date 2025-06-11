@@ -1,0 +1,172 @@
+section.contact-us {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  background-color: var(--primary);
+  color: var(--text-light);
+}
+
+section.contact-us .title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+section.contact-us .sub-title {
+  font-size: 1rem;
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  max-width: 450px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+section.contact-us .flex {
+  display: flex;
+  gap: 2rem;
+  max-width: 700px; /* Narrower max-width */
+  margin: 0 auto;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Form Styling */
+section.contact-us form {
+  flex: 1 1 320px; /* Smaller base width */
+  padding: 1.5rem;
+  border-radius: 12px;
+  background-color: var(--secondary);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  transition: all 0.3s ease;
+  max-width: 380px; /* Limit max form width */
+}
+
+section.contact-us form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: var(--title);
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+section.contact-us form input,
+section.contact-us form textarea {
+  width: 100%;
+  padding: 0.6rem 0.9rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background-color: var(--primary);
+  color: var(--text-light);
+  font-size: 0.95rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+section.contact-us form input:focus,
+section.contact-us form textarea:focus {
+  outline: none;
+  border-color: var(--blue);
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.2);
+}
+
+section.contact-us form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+section.contact-us form input::placeholder,
+section.contact-us form textarea::placeholder {
+  color: var(--text-dark);
+  font-style: italic;
+}
+
+/* Submit Button */
+section.contact-us form button {
+  background-color: var(--blue);
+  color: white;
+  padding: 0.6rem 1.3rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+section.contact-us form button:hover {
+  background-color: #1d4ed8; /* darker blue */
+}
+
+/* Animation Div */
+section.contact-us .animation {
+  flex: 1 1 280px; /* smaller */
+  border-radius: 8px;
+  animation: fadeIn 1.5s ease-in-out;
+  max-width: 280px;
+}
+
+/* Light Theme Adjustments */
+.light input,
+.light textarea {
+  background-color: white;
+  color: black;
+  border-color: #ccc;
+}
+
+.light input::placeholder,
+.light textarea::placeholder {
+  color: #777;
+}
+
+/* Responsive for Mobile */
+@media (max-width: 768px) {
+  section.contact-us .flex {
+    flex-direction: column;
+    max-width: 100%;
+    gap: 1.5rem;
+  }
+
+  section.contact-us .animation {
+    display: none;
+  }
+
+  section.contact-us form {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+  }
+}
+/* Toast success style with blue theme */
+.Toastify__toast--success {
+  background-color: var(--blue);       /* Your blue color */
+  color: white;                        /* White text for contrast */
+  border-left: 5px solid #0033cc;     /* Darker blue accent */
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 51, 204, 0.4);
+}
+
+/* Change the success icon (checkmark) color to blue */
+.Toastify__toast--success svg {
+  fill: var(--blue) !important;
+}
+
+/* Optional: if you want to adjust the stroke too */
+.Toastify__toast--success svg path {
+  stroke: var(--blue) !important;
+}
+
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
