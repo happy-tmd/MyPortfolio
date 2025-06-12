@@ -15,7 +15,7 @@ const Hero = () => {
 
             <div className='icons'>
             <a
-                            href="linkedin.com/in/saida-tamadartaza-a830a3348" // Replace with your LinkedIn URL
+                            href="https://linkedin.com/in/saida-tamadartaza-a830a3348" // Replace with your LinkedIn URL
                             target="_blank" // Opens the link in a new tab
                             rel="noopener noreferrer" // Security best practice
                             className="icon-linkedin flex"
