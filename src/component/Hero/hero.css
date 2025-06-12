@@ -1,3 +1,21 @@
+/* === Hero Section === */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    gap: 2rem;
+}
+
+/* === Left Section === */
+.left-section {
+    flex: 1;
+}
+
+/* === Right Section (animation) === */
+.right-section {
+    flex: 1;
+}
+
 /* === Icons Section === */
 .icons {
     display: flex;
@@ -10,7 +28,6 @@
     transition: transform 0.3s ease;
 }
 
-/* Icon container */
 .icons div {
     width: 50px;
     height: 150px;
@@ -29,7 +46,6 @@
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.5);
 }
 
-/* Icon links */
 .icons a {
     display: inline-flex;
     align-items: center;
@@ -44,7 +60,6 @@
 .icons a:hover {
     color: var(--blue);
 }
-
 
 /* === Download CV Button === */
 .download-cv-button {
@@ -75,8 +90,7 @@
     transform: scale(0.95);
 }
 
-
-/* === Hero Avatar === */
+/* === Hero Avatar (if used) === */
 section.hero .avatar {
     width: 100px;
     height: 100px;
@@ -92,7 +106,6 @@ section.hero .avatar:hover {
     box-shadow: 0 0 30px 8px var(--blue);
     transform: scale(1.05);
 }
-
 
 /* === Hero Text === */
 section.hero .paragraph {
@@ -114,8 +127,6 @@ section.hero .paragraph {
     animation: fadeInText 1s ease forwards 0.4s;
 }
 
-
-/* === Hero Title === */
 section.hero h1.saida {
     font-size: 2.6rem;
     line-height: 3.4rem;
@@ -126,13 +137,11 @@ section.hero h1.saida {
     animation: fadeInText 1s ease forwards 0.2s;
 }
 
-
 /* === Animations === */
 @keyframes fadeInText {
     from { opacity: 0; transform: translateY(10px); }
     to   { opacity: 1; transform: translateY(0); }
 }
-
 
 /* === Responsive Enhancements === */
 @media (max-width: 768px) {
@@ -154,10 +163,19 @@ section.hero h1.saida {
 
     section.hero .paragraph {
         text-align: left;
-        -webkit-line-clamp: 5;
+        -webkit-line-clamp: unset;
+        -webkit-box-orient: unset;
+        display: block;
+        overflow: visible;
+        text-overflow: unset;
     }
 
     section.hero h1.saida {
         text-align: center;
+    }
+
+    /* Cacher l'animation sur mobile */
+    .right-section.animation {
+        display: none;
     }
 }
